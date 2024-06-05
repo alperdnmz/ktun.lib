@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Ödev 7</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 90vw;
+            max-height: 50vh;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>İsim: Alper</h1>
+            <h1>Soyisim: DÖNMEZ</h1>
+            <h1>Öğrenci Numarası: 211220044</h1>
+        </div>
+        <div>
+            <img id="plot" src="/generate_image" alt="Rastgele Noktalar">
+        </div>
+        <button onclick="refreshImage()">Yeni Görsel Oluştur</button>
+    </div>
+    <script>
+        function refreshImage() {
+            document.getElementById('plot').src = '/generate_image?' + new Date().getTime();
+        }
+    </script>
+</body>
+</html>
